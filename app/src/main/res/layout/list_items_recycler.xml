@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.cardview.widget.CardView
+
+    app:cardCornerRadius="15dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cardRecycler"
+        android:layout_width="match_parent"
+    android:minHeight="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+    android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+
+            android:textStyle="italic"
+android:layout_marginStart="9dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            android:id="@+id/noteTextRec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note"></TextView>
+
+    <TextView
+        android:id="@+id/checked"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yapıldı!"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:layout_gravity="end"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="80dp"
+        ></TextView>
+
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+    android:background="@drawable/dialog_bg"
+    android:layout_margin="15dp"
+
+        >
+
+    <EditText
+android:hint="empty note..."
+        android:id="@+id/editTextPopUP"
+        android:layout_width="match_parent"
+        android:minHeight="55dp"
+        android:layout_height="wrap_content"
+
+        android:background="@null"
+        android:editable="true"
+        android:textColor="@color/black"
+        tools:ignore="Deprecated">
+
+
+    </EditText>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/updateButton"
+                android:text="Update"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="130dp"
+                android:layout_height="55dp"></Button>
+
+
+            <Button
+                android:id="@+id/deleteButton"
+android:text="Delete"
+android:layout_marginHorizontal="15dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:layout_width="130dp"
+                android:layout_height="55dp"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
