@@ -65,29 +65,46 @@ class NoteAdapter(
       val checked=holder.view.findViewById<TextView>(R.id.checked)
 
 
-/*var isStriked=true
+      noteList[position].isDone=false
 
-      cardRecycler.setOnLongClickListener {
-if (isStriked==true) {
+      /*cardRecycler.setOnLongClickListener {
+if ( noteList[position].isDone==true) {
 
-   noteTextRec.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG)
+   println("Buraya girdi")
+   noteTextRec.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
 
-   isStriked = false
+ disposable.add(noteDB.updateDoneStatus(noteList[position].isDone!!,noteList[position].id!!).
+ observeOn(AndroidSchedulers.mainThread())
+    .subscribeOn(Schedulers.io()).
+    subscribe())
    checked.visibility=View.VISIBLE
+
+   noteList[position].isDone=false
 
 }
         else{
-   noteTextRec.setPaintFlags(noteTextRec.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv())
-            isStriked=true
+
+           println("Ötekine girdi")
+   noteTextRec.paintFlags =  Paint.STRIKE_THRU_TEXT_FLAG.inv()
+
+
+   disposable.add(noteDB.updateDoneStatus(noteList[position].isDone!!,noteList[position].id!!).
+   observeOn(AndroidSchedulers.mainThread())
+      .subscribeOn(Schedulers.io()).
+      subscribe())
+
+   noteList[position].isDone=true
+
+
    checked.visibility=View.GONE
          }
 
        true
-       }*/
+       }
       cardRecycler.setOnClickListener {
          showDialog(position)
 
-      }
+      }*/
 
    }
 
@@ -141,4 +158,5 @@ updateButton.setOnClickListener {
 private fun showToast(message: String){
    Toast.makeText(context, message,Toast.LENGTH_SHORT).show()
 }
+
 }

@@ -48,7 +48,7 @@ disposable.clear()
 
       binding.saveButton.setOnClickListener {
          val note=(binding.noteView.text)
-         disposable.add(noteDB.insert(NoteData(note.toString())).
+         disposable.add(noteDB.insert(NoteData(note.toString(),false)).
          observeOn(AndroidSchedulers.mainThread()).
          subscribeOn(Schedulers.io()).
          subscribe(this::changeButtonVis))

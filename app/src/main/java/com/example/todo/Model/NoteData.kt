@@ -10,7 +10,10 @@ import androidx.room.PrimaryKey
 data class NoteData(
 
    @ColumnInfo("note")
-   val note:String?
+   val note:String?,
+   @ColumnInfo("isDone")
+   var isDone:Boolean?
+
 
 ):java.io.Serializable{
 

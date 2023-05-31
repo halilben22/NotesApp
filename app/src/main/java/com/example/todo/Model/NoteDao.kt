@@ -21,4 +21,7 @@ interface NoteDao {
    fun update(note:String,id:Int): Completable
 
 
+  /* @Query("UPDATE todo_list SET isDone=:isDone WHERE id=:id")
+   fun updateDoneStatus(isDone:Boolean,id:Int): Completable
+*/
 }
