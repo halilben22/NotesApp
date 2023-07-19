@@ -1,3 +1,6 @@
+
+An easy app to take notes
+
 -Hilt
 -Coroutines
 -Room
