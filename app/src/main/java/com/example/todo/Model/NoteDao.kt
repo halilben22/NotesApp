@@ -1,9 +1,6 @@
 package com.example.todo.Model
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
-import io.reactivex.rxjava3.core.Completable
-import io.reactivex.rxjava3.core.Flowable
 
 
 @Dao

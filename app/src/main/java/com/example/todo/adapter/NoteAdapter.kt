@@ -130,10 +130,12 @@ if ( noteList[position].isDone==true) {
             updateButton.setOnClickListener {
                CoroutineScope(Dispatchers.IO).launch {
                   viewModelNote.update(editText.text.toString(), noteList!![position].id!!)
-                  cancel()
                   viewModelNote.loadNoteDatas()
+                  withContext(Dispatchers.Main) {
 
-                  showToast("Note successfully updated")
+                     showToast("Note updated successfully")
+                    cancel()
+                  }
                }
 
             }
@@ -144,9 +146,9 @@ if ( noteList[position].isDone==true) {
                    viewModelNote.loadNoteDatas()
                   withContext(Dispatchers.Main) {
                      editText.setText("")
-                     cancel()
-                     showToast("Note deleted successfully")
 
+                     showToast("Note deleted successfully")
+                     cancel()
                   }
                }
 
@@ -174,6 +176,8 @@ if ( noteList[position].isDone==true) {
    private fun showToast(message: String) {
       Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
    }
+
+
 }
 
 

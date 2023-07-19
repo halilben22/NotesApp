@@ -25,4 +25,8 @@ class NoteRepo @Inject constructor(private val dao: NoteDao) {
    suspend fun updateNotes(note:String,id:Int){
       dao.update(note,id)
    }
+
+   fun getAllNotes():List<NoteData>{
+     return dao.getAll()
+   }
 }

@@ -40,4 +40,8 @@ class NotesScreenViewModel @Inject constructor(private val repo: NoteRepo) :View
       allNotes.postValue(refreshedList)
    }
 
+   fun getAllNotes():List<NoteData>{
+      return repo.getAllNotes()
+   }
+
 }
