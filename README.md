@@ -2,7 +2,8 @@
 -Coroutines
 -Room
 -MVVM
-
+-Navigation
+-LiveData
 
 
 
