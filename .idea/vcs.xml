@@ -4,5 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/toDoApp" vcs="Git" />
     <mapping directory="$USER_HOME$/Documents/GitHub/NotesApp" vcs="Git" />
+    <mapping directory="$USER_HOME$/Documents/GitHub/toDO3" vcs="" />
   </component>
 </project>

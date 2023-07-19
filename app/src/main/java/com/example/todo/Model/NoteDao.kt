@@ -1,5 +1,6 @@
 package com.example.todo.Model
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
@@ -9,16 +10,16 @@ import io.reactivex.rxjava3.core.Flowable
 interface NoteDao {
 
    @Query("SELECT * FROM todo_list")
-   fun getAll(): Flowable<List<NoteData>>
+fun getAll():List<NoteData>
 
    @Insert
-   fun insert(place: NoteData): Completable
+  suspend fun insert(place: NoteData)
 
    @Delete
-   fun delete(place: NoteData): Completable
+  suspend fun delete(place: NoteData)
 
    @Query("UPDATE todo_list SET note=:note WHERE id=:id")
-   fun update(note:String,id:Int): Completable
+  suspend fun update(note:String,id:Int)
 
 
   /* @Query("UPDATE todo_list SET isDone=:isDone WHERE id=:id")

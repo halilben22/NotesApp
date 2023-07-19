@@ -1,17 +1,19 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id "com.google.dagger.hilt.android"
     id 'kotlin-kapt'
+
 }
 
 android {
     namespace 'com.example.todo'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.todo"
         minSdk 23
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -37,12 +39,20 @@ android {
 }
 
 dependencies {
-    def room_version = "2.5.1"
+    def room_version = "2.5.2"
+    implementation("com.google.dagger:hilt-android:2.47")
+    kapt("com.google.dagger:hilt-android-compiler:2.47")
+    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.room:room-ktx:$room_version")
+//Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
+    //Room database
     implementation("androidx.room:room-runtime:$room_version")
+    //annotation for room
     annotationProcessor("androidx.room:room-compiler:$room_version")
 // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
-    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+
     // optional - RxJava3 support for Room
     implementation("androidx.room:room-rxjava3:$room_version")
     implementation 'androidx.core:core-ktx:1.10.1'
