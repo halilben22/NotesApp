@@ -1,5 +1,5 @@
 
-An easy app to take notes
+An easy app to take notes(Finished)
 
 -Hilt
 -Coroutines
